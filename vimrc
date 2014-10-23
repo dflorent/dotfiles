@@ -60,7 +60,3 @@ set showcmd
 
 " Supprimer le soulignement sur les liens HTML
 :hi link htmlLink NONE
-
-" Keymap emmet vim <c-y>, par <tab>
-let g:user_emmet_expandabbr_key = '<tab>'
-

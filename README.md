@@ -18,7 +18,7 @@ dotfiles
 
 ## Police pour le terminal
 
-FixedSys.dfont
+FixedSys.dfont \(taille : 16 px\)
 
 ## Ressources web
 

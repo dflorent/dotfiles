@@ -2,10 +2,10 @@ dotfiles
 ========
 
 ## Installation
-* Homebrew (http://brew.sh/index_fr.html)
-* iTerm2 (https://iterm2.com/downloads.html)
+* Homebrew [](http://brew.sh/index_fr.html)
+* iTerm2 [](https://iterm2.com/downloads.html)
 * Zsh
-* Oh my Zsh (https://github.com/robbyrussell/oh-my-zsh)
+* Oh my Zsh [](https://github.com/robbyrussell/oh-my-zsh)
 * Tmux \(installation via brew install tmux\) 
 * Vim 
 

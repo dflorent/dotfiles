@@ -60,3 +60,6 @@ set showcmd
 
 " Supprimer le soulignement sur les liens HTML
 :hi link htmlLink NONE
+
+" Combinaison de touche Emmet (Shift + Tab)                                 
+imap <expr> <s-tab> emmet#expandAbbrIntelligent("\<s-tab>")

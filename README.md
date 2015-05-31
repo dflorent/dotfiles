@@ -6,7 +6,7 @@ dotfiles
 * Manageur de paquets : **Homebrew** (OS X)
 * Emulateur de terminal : **iTerm2** (OS X) - **rxvt-unicode-256color** (Ubuntu)
 * Shell : **Zsh** (OS X et Ubuntu) avec **Oh my Zsh** (OS X et Ubuntu)
-* Terminal multiplexeur : Tmux (OS X et Ubuntu)
+* Terminal multiplexeur : **Tmux** (OS X et Ubuntu)
 * Editeur de texte : **Vim** (OS X et Ubuntu)
 
 ## Police pour le terminal

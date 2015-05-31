@@ -52,14 +52,14 @@ set tw=79
 set textwidth=79
 
 " Ligne courante en surbrillance
-" set cursorline
+set cursorline
 
 " Colorisation syntaxique
 syntax enable
 set encoding=utf8
 set t_Co=256
 set background=dark
-colorscheme twilight256
+colorscheme Tomorrow-Night-Bright
 
 " Commentaire en italique (http://bit.ly/1DuFn1w)
 " highlight Comment cterm=italic

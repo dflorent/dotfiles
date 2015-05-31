@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 
-" Ajoute de Vundle au runtime path et initialisation
+" Ajout de Vundle au runtime path et initialisation
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -10,7 +10,16 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Placer ici la liste des plugins Vundle
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'mattn/emmet-vim'
+Plugin 'evidens/vim-twig'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-markdown'
+Plugin 'bling/vim-airline'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne 
 call vundle#end()
@@ -23,6 +32,11 @@ filetype plugin indent on
 " :PluginClean      - suppression des plugins inutilises
 " voir :h vundle pour plus d'informations ou wiki ou FAQ
 
+" Pas de backups
+set nobackup
+set nowritebackup
+set noswapfile
+
 " Indentation
 set smartindent 
 set tabstop=4
@@ -33,20 +47,21 @@ set expandtab
 set relativenumber
 
 " Affiche un repere a 80 caractere et limite a 80 caracteres
-" set colorcolumn=80
-" set tw=79
-" set textwidth=79
+set colorcolumn=80
+set tw=79
+set textwidth=79
 
 " Ligne courante en surbrillance
-set cursorline
+" set cursorline
 
 " Colorisation syntaxique
-syntax on 
-set background=dark
+syntax enable
 set encoding=utf8
-colorscheme solarized
+set t_Co=256
+set background=dark
+colorscheme twilight256
 
-" Commentaire en italique
+" Commentaire en italique (http://bit.ly/1DuFn1w)
 " highlight Comment cterm=italic
 
 " Active la surbrillance lors d'une recherche.
@@ -61,5 +76,21 @@ set showcmd
 " Supprimer le soulignement sur les liens HTML
 :hi link htmlLink NONE
 
-" Combinaison de touche Emmet (Shift + Tab)                                 
+" Combinaison de touche Emmet (Shift + Tab)
 imap <expr> <s-tab> emmet#expandAbbrIntelligent("\<s-tab>")
+
+" delimitMate
+let g:delimitMate_autoclose = 1  
+let g:delimitMate_expand_cr = 2  
+let g:delimitMate_expand_space = 1  
+let delimitMate_expand_inside_quotes = 1  
+let g:delimitMate_smart_quotes = 1  
+let g:delimitMate_jump_expansion = 1  
+let g:delimitMate_matchpairs = "(:),[:],{:},<:>"
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'ra'
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1

@@ -1,0 +1,29 @@
+! Urxvt Settings
+
+! Support des onglets et des URLs
+URxvt.perl-ext-common: defaut,tabbed,matcher
+
+! Pas de scrollbar
+URxvt*scrollBar: false
+
+! Couleur de l'arriere plan
+URxvt*background: #000000
+
+! Couleur du premier plan
+URxvt*foreground: #a8a8a8
+
+! Taille par défaut du terminal
+URxvt*geometry: 150x25
+
+! Police
+URxvt*font: xft:Consolas:size=10
+
+! Correction de l'espace entre les caractères
+URxvt*letterSpace: -1
+
+! Interligne
+URxvt*lineSpace: 5
+
+! Lancer les URLs dans le navigateur avec le bouton gauche de la souris
+URxvt.url-launcher: /usr/bin/google-chrome
+URxvt.matcher.button: 1

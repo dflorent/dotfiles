@@ -2,24 +2,16 @@ dotfiles
 ========
 
 ## Installation
-* Homebrew [http://brew.sh/index_fr.html](http://brew.sh/index_fr.html)
-* iTerm2 [https://iterm2.com/downloads.html](https://iterm2.com/downloads.html)
-* Zsh
-* Oh my Zsh [https://github.com/robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* Tmux \(installation via brew install tmux\) 
-* Vim 
 
-## Plugins Vim
-
-* ctrlp.vim
-* emmet-vim
-* vim-json
-* vim-twig
+* Manageur de paquets : **Homebrew** (OS X)
+* Emulateur de terminal : **iTerm2** (OS X) - **rxvt-unicode-256color** (Ubuntu)
+* Shell : **Zsh** (OS X et Ubuntu) avec **Oh my Zsh** (OS X et Ubuntu)
+* Terminal multiplexeur : Tmux (OS X et Ubuntu)
+* Editeur de texte : **Vim** (OS X et Ubuntu)
 
 ## Police pour le terminal
 
-FixedSys.dfont en taille 15px disponible dans ce dépot.
-
+Consolas en taille 12px (OS X) ou 10px (Ubuntu), interlignage 1.5 minimum.
 
 ## Ressources web
 

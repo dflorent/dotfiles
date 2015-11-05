@@ -20,6 +20,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-markdown'
 Plugin 'bling/vim-airline'
+Plugin 'elzr/vim-json'
+Plugin 'tpope/vim-surround'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne 
 call vundle#end()
@@ -47,9 +49,9 @@ set expandtab
 set relativenumber
 
 " Affiche un repere a 80 caractere et limite a 80 caracteres
-set colorcolumn=80
-set tw=79
-set textwidth=79
+" set colorcolumn=80
+" set tw=79
+" set textwidth=79
 
 " Ligne courante en surbrillance
 set cursorline

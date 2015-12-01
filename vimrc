@@ -22,8 +22,9 @@ Plugin 'tpope/vim-markdown'
 Plugin 'bling/vim-airline'
 Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-surround'
+Plugin 'bronson/vim-trailing-whitespace'
 
-" Tous les plugins doivent etre ajoutes avant cette ligne 
+" Tous les plugins doivent etre ajoutes avant cette ligne
 call vundle#end()
 filetype plugin indent on
 
@@ -40,12 +41,12 @@ set nowritebackup
 set noswapfile
 
 " Indentation
-set smartindent 
+set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Affiche les numeros de ligne en relative 
+" Affiche les numeros de ligne en relative
 set relativenumber
 
 " Affiche un repere a 80 caractere et limite a 80 caracteres
@@ -67,10 +68,10 @@ colorscheme Tomorrow-Night-Bright
 " highlight Comment cterm=italic
 
 " Active la surbrillance lors d'une recherche.
-set hlsearch 
+set hlsearch
 
-" Affiche la position actuelle du curseur 
-set ruler 
+" Affiche la position actuelle du curseur
+set ruler
 
 " Affiche la commande en cours
 set showcmd
@@ -82,12 +83,12 @@ set showcmd
 imap <expr> <s-tab> emmet#expandAbbrIntelligent("\<s-tab>")
 
 " delimitMate
-let g:delimitMate_autoclose = 1  
-let g:delimitMate_expand_cr = 2  
-let g:delimitMate_expand_space = 1  
-let delimitMate_expand_inside_quotes = 1  
-let g:delimitMate_smart_quotes = 1  
-let g:delimitMate_jump_expansion = 1  
+let g:delimitMate_autoclose = 1
+let g:delimitMate_expand_cr = 2
+let g:delimitMate_expand_space = 1
+let delimitMate_expand_inside_quotes = 1
+let g:delimitMate_smart_quotes = 1
+let g:delimitMate_jump_expansion = 1
 let g:delimitMate_matchpairs = "(:),[:],{:},<:>"
 
 " CtrlP

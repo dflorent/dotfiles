@@ -19,9 +19,9 @@ Plugin 'evidens/vim-twig'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'elzr/vim-json'
-Plugin 'tpope/vim-surround'
 Plugin 'bronson/vim-trailing-whitespace'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne

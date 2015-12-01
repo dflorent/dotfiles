@@ -29,7 +29,7 @@ filetype plugin indent on
 
 " :PluginList       - liste des plugins configures
 " :PluginInstall    - installation des plugin
-" :PluginUpdate     - mis  a jour des plugins
+" :PluginUpdate     - mis a jour des plugins
 " :PluginSearch foo - recherche pour foo
 " :PluginClean      - suppression des plugins inutilises
 " voir :h vundle pour plus d'informations ou wiki ou FAQ
@@ -96,3 +96,7 @@ let g:ctrlp_working_path_mode = 'ra'
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
+
+" Airline
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1

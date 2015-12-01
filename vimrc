@@ -23,6 +23,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'elzr/vim-json'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'airblade/vim-gitgutter'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne
 call vundle#end()
@@ -100,4 +101,3 @@ let NERDTreeQuitOnOpen=1
 
 " Airline
 set laststatus=2
-let g:airline#extensions#tabline#enabled = 1

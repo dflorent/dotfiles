@@ -24,6 +24,7 @@ Plugin 'bling/vim-airline'
 Plugin 'elzr/vim-json'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'edkolev/tmuxline.vim'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne
 call vundle#end()
@@ -101,3 +102,6 @@ let NERDTreeQuitOnOpen=1
 
 " Airline
 set laststatus=2
+
+" Tmuxline
+let g:tmuxline_powerline_separators = 0

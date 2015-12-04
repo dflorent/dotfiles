@@ -13,6 +13,16 @@ dotfiles
 
 Consolas en taille 12px (OS X) ou 10px (Ubuntu), interlignage 1.5 minimum.
 
+## Copier-Coller pour URxvt
+
+Sauvegarder le fichier clipboard (urxvt-perls) via la commande suivante :
+
+```shell
+sudo cp /usr/lib/urxvt/perl/clipboard /usr/lib/urxvt/perl/clipboard.bak
+```
+
+Remplacer le contenu du fichier clipboard par celui du dépôt dans le répertoire /usr/lib/urxvt/perl/.
+
 ## Ressources web
 
 * [Vim grammar](https://github.com/JoelQ/vim-grammar/blob/master/cheat_sheet.md)

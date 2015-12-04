@@ -1,7 +1,14 @@
 ! Urxvt Settings
 
-! Support des onglets et des URLs
-URxvt.perl-ext-common: defaut,tabbed,matcher
+! Support des onglets et des URLs et du clipboard
+URxvt.perl-ext-common: defaut,tabbed,matcher,clipboard
+
+! Désactivation de la combinaison de Touche Ctrl+Shift
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! Copier-coller avec Shift + Ctrl + v
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
 
 ! Pas de scrollbar
 URxvt*scrollBar: false

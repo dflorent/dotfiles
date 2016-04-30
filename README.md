@@ -13,6 +13,8 @@ dotfiles
 
 Consolas en taille 12px (OS X) ou 10px (Ubuntu), interlignage 1.5 minimum.
 
+[FixedSys.font](http://www.fixedsysexcelsior.com/)
+
 ## Copier-Coller pour URxvt
 
 Sauvegarder le fichier clipboard (urxvt-perls) via la commande suivante :

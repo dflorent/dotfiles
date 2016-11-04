@@ -12,19 +12,19 @@ Plugin 'gmarik/Vundle.vim'
 " Placer ici la liste des plugins Vundle
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mattn/emmet-vim'
-Plugin 'evidens/vim-twig'
-Plugin 'Raimondi/delimitMate'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-surround'
-Plugin 'bling/vim-airline'
-Plugin 'elzr/vim-json'
-Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
+Plugin 'Raimondi/delimitMate'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'tpope/vim-surround'
+Plugin 'sotte/presenting.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'evidens/vim-twig'
+Plugin 'elzr/vim-json'
+Plugin 'vim-scripts/vim-stylus'
+Plugin 'vim-scripts/jade.vim'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne
 call vundle#end()
@@ -47,6 +47,7 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+autocmd Filetype css,scss,javascript setlocal tabstop=2 shiftwidth=2
 
 " Affiche les numeros de ligne en relative
 set relativenumber
@@ -63,8 +64,8 @@ set cursorline
 syntax enable
 set encoding=utf8
 set t_Co=256
-set background=dark
-colorscheme Tomorrow-Night-Bright
+set background=light
+colorscheme Tomorrow
 
 " Commentaire en italique (http://bit.ly/1DuFn1w)
 " highlight Comment cterm=italic
@@ -96,12 +97,13 @@ let g:delimitMate_matchpairs = "(:),[:],{:},<:>"
 " CtrlP
 let g:ctrlp_working_path_mode = 'ra'
 
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeQuitOnOpen=1
-
 " Airline
 set laststatus=2
 
 " Tmuxline
 let g:tmuxline_powerline_separators = 0
+
+" PHP : coloration des requetes SQL et balises HTML
+let php_sql_query = 1
+let php_htmlInStrings = 1
+

@@ -1,11 +1,16 @@
 {
+    "bold_folder_labels": true,
     "close_windows_when_empty": true,
-    "color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow.tmTheme",
+    "color_scheme": "Packages/User/SublimeLinter/One Dark (SL).tmTheme",
     "create_window_at_startup": false,
     "detect_slow_plugins": false,
     "ensure_newline_at_eof_on_save": true,
     "font_face": "Consolas",
-    "font_size": 12,
+    "font_options":
+    [
+        "italic"
+    ],
+    "font_size": 14,
     "highlight_line": true,
     "hot_exit": false,
     "ignored_packages":
@@ -13,12 +18,12 @@
         "Vintage"
     ],
     "line_numbers": true,
-    "line_padding_bottom": 3,
-    "line_padding_top": 3,
+    "line_padding_bottom": 4,
+    "line_padding_top": 4,
     "remember_open_files": false,
     "rulers":
     [
-        80
+        120
     ],
     "tab_size": 4,
     "translate_tabs_to_spaces": true,

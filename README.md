@@ -7,20 +7,30 @@ dotfiles
 * Emulateur de terminal : **iTerm2** (OS X) - **rxvt-unicode-256color** (Ubuntu)
 * Shell : **Zsh** (OS X et Ubuntu) avec **Oh my Zsh** (OS X et Ubuntu)
 * Terminal multiplexeur : **Tmux** (OS X et Ubuntu)
-* Editeur de texte : **Vim** (OS X et Ubuntu)
+* Editeur de texte : **Vim** ou **Sublime Text** (OS X et Ubuntu)
 
 ## Police pour le terminal
 
-Consolas en taille 12px (OS X) ou 10px (Ubuntu), interlignage 1.5 minimum.
+Consolas en taille 14px, italic (OS X) ou 10.6px (Ubuntu), interlignage 1.5 minimum.
+
+ou
 
 [FixedSys.font](http://www.fixedsysexcelsior.com/)
 
 ## Plugins Sublime Text
 
-* Emmet
 * Package Control
-* Sass
 * Tomorrow Color Schemes
+* One Dark Color Scheme
+* Babel
+* EditorConfig
+* Emmet
+* GitGutter
+* Sass
+* SideBarEnhancements
+* SublimeLinter
+* SublimeLinter-pep8
+* SublimeLinter-pyflakes
 
 ## Copier-Coller pour URxvt
 

@@ -11,6 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Placer ici la liste des plugins Vundle
 Plugin 'flazz/vim-colorschemes'
+Plugin 'joshdick/onedark.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'airblade/vim-gitgutter'
@@ -19,12 +20,9 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'tpope/vim-surround'
-Plugin 'sotte/presenting.vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'evidens/vim-twig'
-Plugin 'elzr/vim-json'
-Plugin 'vim-scripts/vim-stylus'
-Plugin 'vim-scripts/jade.vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-syntastic/syntastic'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne
 call vundle#end()
@@ -47,15 +45,19 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-autocmd Filetype css,scss,javascript setlocal tabstop=2 shiftwidth=2
+autocmd Filetype html,css,scss,javascript,htmldjango setlocal tabstop=2 shiftwidth=2
+
+" Prise en charge de la souris
+set mouse=a
 
 " Affiche les numeros de ligne en relative
 set relativenumber
 
 " Affiche un repere a 80 caractere et limite a 80 caracteres
-" set colorcolumn=80
-" set tw=79
-" set textwidth=79
+set colorcolumn=120
+" set tw=119
+" set textwidth=119
+set nowrap
 
 " Ligne courante en surbrillance
 set cursorline
@@ -64,8 +66,8 @@ set cursorline
 syntax enable
 set encoding=utf8
 set t_Co=256
-set background=light
-colorscheme Tomorrow
+set background=dark
+colorscheme onedark
 
 " Commentaire en italique (http://bit.ly/1DuFn1w)
 " highlight Comment cterm=italic
@@ -103,7 +105,27 @@ set laststatus=2
 " Tmuxline
 let g:tmuxline_powerline_separators = 0
 
-" PHP : coloration des requetes SQL et balises HTML
-let php_sql_query = 1
-let php_htmlInStrings = 1
+" Smart shortcuts
+noremap     <S-Tab>     :tabprevious<CR>
+noremap     <Tab>       :tabnext<CR>
+noremap     <C-t>       :tabedit
+inoremap    <C-t>       <Esc>:tabedit
+noremap     <C-w>       :q!<CR>
+inoremap    <C-w>       <Esc>:q!<CR>
+noremap     <silent>    <C-s>    :w!<CR>
+inoremap    <silent>    <C-s>    <Esc>:w!<CR>
+vnoremap    <Tab>       >
+vnoremap    <S-Tab>     <
+noremap     <S-Right>   <C-w><Right>
+noremap     <S-Left>    <C-w><Left>
+noremap     <S-Up>      <C-w><Up>
+noremap     <S-Down>    <C-w><Down>
 
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['pep8', 'pyflakes']

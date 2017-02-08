@@ -52,6 +52,9 @@ autocmd Filetype html,css,scss,javascript,htmldjango setlocal tabstop=2 shiftwid
 " Prise en charge de la souris
 set mouse=a
 
+" Touche backspace
+set backspace=2
+
 " Affiche les numeros de ligne en relative
 set relativenumber
 
@@ -142,4 +145,7 @@ endfunction
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": ["python"],
+    \ "passive_filetypes": [] }

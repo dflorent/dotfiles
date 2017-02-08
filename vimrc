@@ -23,6 +23,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'mileszs/ack.vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne
 call vundle#end()
@@ -123,9 +125,21 @@ noremap     <S-Down>    <C-w><Down>
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd BufCreate * call s:addingNewTab()
+function! s:addingNewTab()
+	let filename = expand('%:t')
+	if winnr('$') < 2 && exists('t:NERDTreeBufName') == 0
+        NERDTree
+		if !empty(filename)
+			wincmd l
+		endif
+	endif
+endfunction
 
 " Syntastic
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
+let g:syntastic_javascript_checkers = ['eslint']

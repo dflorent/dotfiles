@@ -111,6 +111,9 @@ set laststatus=2
 " Tmuxline
 let g:tmuxline_powerline_separators = 0
 
+" Copier en utilisant le clipboard
+map <C-c> "+y<CR>
+
 " Smart shortcuts
 noremap     <S-Tab>     :tabprevious<CR>
 noremap     <Tab>       :tabnext<CR>

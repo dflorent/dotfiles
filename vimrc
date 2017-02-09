@@ -25,6 +25,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'mileszs/ack.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'mkitt/tabline.vim.git'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne
 call vundle#end()
@@ -145,7 +146,13 @@ endfunction
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
+let g:syntastic_python_pep8_args='--max-line-length=120'
 let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": ["python"],
     \ "passive_filetypes": [] }
+
+" Tabline
+hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
+hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
+hi TabLineSel   ctermfg=white  ctermbg=DarkBlue  cterm=NONE

@@ -146,7 +146,6 @@ endfunction
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
-let g:syntastic_python_pep8_args='--max-line-length=120'
 let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": ["python"],

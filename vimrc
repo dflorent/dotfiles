@@ -11,7 +11,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Placer ici la liste des plugins Vundle
 Plugin 'flazz/vim-colorschemes'
-Plugin 'joshdick/onedark.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'airblade/vim-gitgutter'
@@ -21,11 +20,11 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'tpope/vim-surround'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'mileszs/ack.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mkitt/tabline.vim.git'
+Plugin 'vim-scripts/LustyExplorer'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne
 call vundle#end()
@@ -37,6 +36,11 @@ filetype plugin indent on
 " :PluginSearch foo - recherche pour foo
 " :PluginClean      - suppression des plugins inutilises
 " voir :h vundle pour plus d'informations ou wiki ou FAQ
+
+set hidden
+
+" Leader re-mapping
+let mapleader = ','
 
 " Pas de backups
 set nobackup
@@ -59,7 +63,7 @@ set backspace=2
 " Affiche les numeros de ligne en relative
 set relativenumber
 
-" Affiche un repere a 80 caractere et limite a 80 caracteres
+" Repere à 120 caractere
 set colorcolumn=120
 " set tw=119
 " set textwidth=119
@@ -73,7 +77,7 @@ syntax enable
 set encoding=utf8
 set t_Co=256
 set background=dark
-colorscheme onedark
+colorscheme Tomorrow-Night-Eighties
 
 " Commentaire en italique (http://bit.ly/1DuFn1w)
 " highlight Comment cterm=italic
@@ -86,6 +90,9 @@ set ruler
 
 " Affiche la commande en cours
 set showcmd
+
+" Toggle paste
+set pastetoggle=<F2>
 
 " Supprimer le soulignement sur les liens HTML
 :hi link htmlLink NONE
@@ -129,21 +136,6 @@ noremap     <S-Right>   <C-w><Right>
 noremap     <S-Left>    <C-w><Left>
 noremap     <S-Up>      <C-w><Up>
 noremap     <S-Down>    <C-w><Down>
-
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd BufCreate * call s:addingNewTab()
-function! s:addingNewTab()
-	let filename = expand('%:t')
-	if winnr('$') < 2 && exists('t:NERDTreeBufName') == 0
-        NERDTree
-		if !empty(filename)
-			wincmd l
-		endif
-	endif
-endfunction
 
 " Syntastic
 let g:syntastic_check_on_open = 1

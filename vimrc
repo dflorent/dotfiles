@@ -121,6 +121,9 @@ let g:tmuxline_powerline_separators = 0
 " Copier en utilisant le clipboard
 map <C-c> "+y<CR>
 
+" the silver searcher (code-searching tool)
+let g:ackprg = 'ag --vimgrep'
+
 " Smart shortcuts
 noremap     <S-Tab>     :tabprevious<CR>
 noremap     <Tab>       :tabnext<CR>

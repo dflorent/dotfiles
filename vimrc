@@ -37,6 +37,7 @@ filetype plugin indent on
 " :PluginClean      - suppression des plugins inutilises
 " voir :h vundle pour plus d'informations ou wiki ou FAQ
 
+set shell=sh
 set hidden
 
 " Leader re-mapping

@@ -8,7 +8,7 @@ dotfiles
 * Shell : **Zsh** (OS X et Ubuntu) avec **Oh my Zsh** (OS X et Ubuntu)
 * Terminal multiplexeur : **Tmux** (OS X et Ubuntu)
 * Editeur de texte : **Vim** ou **Sublime Text** (OS X et Ubuntu)
-* Recherche : **ack** + **ack.vim** (OS X et Ubuntu)
+* Recherche : **the_silver_searcher** + **ack.vim** (OS X et Ubuntu)
 
 ## Police pour le terminal
 

@@ -11,6 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Placer ici la liste des plugins Vundle
 Plugin 'flazz/vim-colorschemes'
+Plugin 'joshdick/onedark.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'airblade/vim-gitgutter'
@@ -20,11 +21,11 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'tpope/vim-surround'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'mileszs/ack.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mkitt/tabline.vim.git'
 Plugin 'vim-scripts/LustyExplorer'
+Plugin 'w0rp/ale'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne
 call vundle#end()
@@ -62,9 +63,9 @@ set mouse=a
 set backspace=2
 
 " Affiche les numeros de ligne en relative
-set relativenumber
+set number
 
-" Repere à 120 caractere
+" Repère à 120 caractères
 set colorcolumn=120
 " set tw=119
 " set textwidth=119
@@ -78,7 +79,7 @@ syntax enable
 set encoding=utf8
 set t_Co=256
 set background=dark
-colorscheme Tomorrow-Night-Eighties
+colorscheme onedark
 
 " Commentaire en italique (http://bit.ly/1DuFn1w)
 " highlight Comment cterm=italic
@@ -122,9 +123,6 @@ let g:tmuxline_powerline_separators = 0
 " Copier en utilisant le clipboard
 map <C-c> "+y<CR>
 
-" the silver searcher (code-searching tool)
-let g:ackprg = 'ag --vimgrep'
-
 " Smart shortcuts
 noremap     <S-Tab>     :tabprevious<CR>
 noremap     <Tab>       :tabnext<CR>
@@ -141,17 +139,13 @@ noremap     <S-Left>    <C-w><Left>
 noremap     <S-Up>      <C-w><Up>
 noremap     <S-Down>    <C-w><Down>
 
-" Syntastic
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pep8', 'pyflakes']
-let g:syntastic_python_pep8_args='--max-line-length=120'
-let g:syntastic_mode_map = {
-    \ "mode": "passive",
-    \ "active_filetypes": ["python"],
-    \ "passive_filetypes": [] }
+" the silver seracher (code-searching tool)
+let g:ackprg = 'ag --vimgrep'
 
 " Tabline
 hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
 hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
 hi TabLineSel   ctermfg=white  ctermbg=DarkBlue  cterm=NONE
+
+" Ale
+let g:ale_completion_enabled = 1

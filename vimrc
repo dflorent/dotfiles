@@ -10,21 +10,17 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Placer ici la liste des plugins Vundle
-Plugin 'flazz/vim-colorschemes'
-Plugin 'joshdick/onedark.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
+Plugin 'Raimondi/delimitMate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
-Plugin 'Raimondi/delimitMate'
-Plugin 'edkolev/tmuxline.vim'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'tpope/vim-surround'
-Plugin 'sheerun/vim-polyglot'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'mkitt/tabline.vim.git'
-Plugin 'vim-scripts/LustyExplorer'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
 
 " Tous les plugins doivent etre ajoutes avant cette ligne
@@ -38,16 +34,22 @@ filetype plugin indent on
 " :PluginClean      - suppression des plugins inutilises
 " voir :h vundle pour plus d'informations ou wiki ou FAQ
 
-set shell=sh
-set hidden
-
-" Leader re-mapping
-let mapleader = ','
-
 " Pas de backups
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Prise en charge de la souris
+set mouse=a
+
+" Touche backspace
+set backspace=2
+
+" Numéros de ligne
+set number
+
+" Ligne courante en surbrillance
+set cursorline
 
 " Indentation
 set smartindent
@@ -56,36 +58,20 @@ set shiftwidth=4
 set expandtab
 autocmd Filetype html,css,scss,javascript,htmldjango setlocal tabstop=2 shiftwidth=2
 
-" Prise en charge de la souris
-set mouse=a
-
-" Touche backspace
-set backspace=2
-
-" Affiche les numeros de ligne en relative
-set number
-
-" Repère à 120 caractères
+" Affiche un repère à 120 caractères
 set colorcolumn=120
-" set tw=119
-" set textwidth=119
 set nowrap
-
-" Ligne courante en surbrillance
-set cursorline
 
 " Colorisation syntaxique
 syntax enable
 set encoding=utf8
 set t_Co=256
 set background=dark
-colorscheme onedark
+colorscheme solarized
 
-" Commentaire en italique (http://bit.ly/1DuFn1w)
-" highlight Comment cterm=italic
-
-" Active la surbrillance lors d'une recherche.
+" Active la surbrillance lors d'une recherch (bascule avec <F4>)
 set hlsearch
+noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " Affiche la position actuelle du curseur
 set ruler
@@ -93,14 +79,14 @@ set ruler
 " Affiche la commande en cours
 set showcmd
 
-" Toggle paste
-set pastetoggle=<F2>
-
-" Supprimer le soulignement sur les liens HTML
+" Supprime le soulignement sur les liens HTML
 :hi link htmlLink NONE
 
-" Combinaison de touche Emmet (Shift + Tab)
-imap <expr> <s-tab> emmet#expandAbbrIntelligent("\<s-tab>")
+" Copier en utilisant le clipboard
+map <C-c> "+y<CR>
+
+" Basculer en auto-indentation lors d'un copier-coller
+set pastetoggle=<F2>
 
 " delimitMate
 let g:delimitMate_autoclose = 1
@@ -111,41 +97,30 @@ let g:delimitMate_smart_quotes = 1
 let g:delimitMate_jump_expansion = 1
 let g:delimitMate_matchpairs = "(:),[:],{:},<:>"
 
-" CtrlP
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+
+" ctrlp
 let g:ctrlp_working_path_mode = 'ra'
 
-" Airline
-set laststatus=2
-
-" Tmuxline
+" tmuxline
 let g:tmuxline_powerline_separators = 0
 
-" Copier en utilisant le clipboard
-map <C-c> "+y<CR>
-
-" Smart shortcuts
-noremap     <S-Tab>     :tabprevious<CR>
-noremap     <Tab>       :tabnext<CR>
-noremap     <C-t>       :tabedit
-inoremap    <C-t>       <Esc>:tabedit
-noremap     <C-w>       :q!<CR>
-inoremap    <C-w>       <Esc>:q!<CR>
-noremap     <silent>    <C-s>    :w!<CR>
-inoremap    <silent>    <C-s>    <Esc>:w!<CR>
-vnoremap    <Tab>       >
-vnoremap    <S-Tab>     <
-noremap     <S-Right>   <C-w><Right>
-noremap     <S-Left>    <C-w><Left>
-noremap     <S-Up>      <C-w><Up>
-noremap     <S-Down>    <C-w><Down>
+" emmet (Shift + Tab)
+imap <expr> <s-tab> emmet#expandAbbrIntelligent("\<s-tab>")
 
 " the silver seracher (code-searching tool)
 let g:ackprg = 'ag --vimgrep'
 
-" Tabline
-hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
-hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
-hi TabLineSel   ctermfg=white  ctermbg=DarkBlue  cterm=NONE
-
-" Ale
+" ale
 let g:ale_completion_enabled = 1
+
+" Raccourcis
+noremap     <S-Tab>      :bprevious<CR>
+noremap     <Tab>        :bnext<CR>
+vnoremap    <Tab>        >
+vnoremap    <S-Tab>      <
+noremap     <S-Right>    <C-w><Right>
+noremap     <S-Left>     <C-w><Left>
+noremap     <S-Up>       <C-w><Up>
+noremap     <S-Down>     <C-w><Down>

@@ -4,7 +4,9 @@
 
 ZSH_THEME="nanotech"
 
-plugins=(git git-flow sublime npm pyenv gulp zh-syntax-highlighting)
+plugins=(git git-flow sublime npm pyenv gulp yarn zh-syntax-highlighting)
+
+autoload -U compinit && compinit
 
 export EDITOR='vim'
 
@@ -21,3 +23,6 @@ eval "$(ndenv init -)"
 
 # alias
 alias v='vim'
+alias www="cd ~/www"
+alias doc="cd ~/Documents"
+alias dld="cd ~/Downloads"

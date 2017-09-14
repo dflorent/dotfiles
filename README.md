@@ -22,7 +22,6 @@ ou
 
 * Package Control
 * Tomorrow Color Schemes
-* One Dark Color Scheme
 * Babel
 * EditorConfig
 * Emmet

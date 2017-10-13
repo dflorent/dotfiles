@@ -48,6 +48,7 @@ set backspace=2
 
 " Numéros de ligne
 set number
+set relativenumber
 
 " Ligne courante en surbrillance
 set cursorline
